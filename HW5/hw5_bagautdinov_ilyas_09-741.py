@@ -64,7 +64,7 @@ watermark_bits = watermark_bits.to01()
 rate, signal = wavfile.read("sound.wav")
 
 # используется сигнал с 2 каналами, поэтому вытаскиваю только 1
-signal = np.moveaxis(signal, 1, 0)[0]
+signal = np.moveaxis(signal, 1, 0)[0]   
 
 step = 1000
 

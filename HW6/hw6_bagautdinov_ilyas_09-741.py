@@ -31,10 +31,14 @@ def filter_signal(process_signal):
     w, h = signal.freqz(b, a)
     plot(w / np.pi, np.abs(h), 'FIR filter')
 
+    h_temp = h
+
     [b, a] = signal.iirfilter(10, [0.25, 0.8], btype="bandpass")
     process_signal = signal.filtfilt(b, a, process_signal)
     w, h = signal.freqz(b, a)
     plot(w / np.pi, np.abs(h), 'IIR filter')
+
+    plot(w / np.pi, np.abs(h * h_temp), 'Result filter')
 
     return process_signal
 
