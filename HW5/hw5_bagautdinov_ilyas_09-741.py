@@ -61,7 +61,7 @@ watermark_bits = bitarray()
 watermark_bits.frombytes(b'   Never gonna give you up Never gonna let you down Never gonna run around and desert you')
 watermark_bits = watermark_bits.to01()
 
-rate, signal = wavfile.read("sound.wav")
+rate, signal = wavfile.read("../HW7/sound.wav")
 
 # используется сигнал с 2 каналами, поэтому вытаскиваю только 1
 signal = np.moveaxis(signal, 1, 0)[0]   
