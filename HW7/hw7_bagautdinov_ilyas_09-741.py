@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
-from scipy.signal import filtfilt
 from scipy.io import wavfile
 from scipy.fft import fftshift
 from pydub import AudioSegment
